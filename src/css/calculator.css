@@ -1,0 +1,159 @@
+@font-face {
+    font-family: 'Display Font';
+    src: url('../fonts/RobotoMono-Thin.ttf') format('truetype');
+  }
+@font-face {
+    font-family: 'Display Calculator';
+    src: url('../fonts/Calculator.ttf') format('truetype');
+  }
+
+h1 {
+    /* Letra colorida */
+    background-image: linear-gradient(to left, rgb(243, 247, 40), green);
+    color: black;
+    background-clip: text;
+    -webkit-background-clip: text;
+  
+   
+    -webkit-text-fill-color: transparent;
+
+    
+    font-size: 80px;
+    font-style: oblique;
+    margin: auto;
+    margin-bottom: 30px;
+}
+
+
+.calculator{
+    background-color: skyblue;
+    width: 26vw;
+    margin: auto;
+    height: auto;
+    border-radius: 20px;
+}
+
+.border-top{
+    height: 3vh;
+}
+
+
+
+.display {
+    display: flex;
+    height: 9vh;
+    width: 23vw;
+    background-color: black;
+    margin: auto;
+    margin-left: 1.7vw;
+    align-items: center;
+    justify-content: flex-end;
+    font-size: 30px;
+    color: rgb(59, 185, 59);
+    margin-bottom: 5px;
+    font-size: 49px;
+    overflow: hidden;
+
+    font-family: 'Display Calculator';
+}  
+.display > .numbers {
+    margin-right: 10px;
+}
+
+.comands {
+    display: grid;
+    width: 22vw;
+    height: 60vh;
+    margin: auto;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+button:hover {
+    background-color: rgb(162, 165, 168);
+}
+
+.comand {
+    border-radius: 200px;
+    height: 8.8vh;
+    width: 8.8vh;
+    margin-top: 10px;
+    font-size: 30px;
+    border: none;
+    margin-left: 0px;
+    margin-right: 2px;
+}
+
+
+#full-calc {
+    background-color: aqua;
+}
+
+
+
+/* responsividade */
+@media(max-width: 500px) {
+    .calculator{
+        background-color: skyblue;
+        width: 82vw;
+        margin: auto;
+        height: auto;
+        border-radius: 20px;
+    }
+
+    .comands {
+        display: grid;
+        width: 78vw;
+        height: 60vh;
+        margin: auto;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .display {
+        display: flex;
+        height: 9vh;
+        width: 77vw;
+        background-color: black;
+        margin: auto;
+        margin-left: 1.7vw;
+        align-items: center;
+        justify-content: flex-end;
+        font-size: 30px;
+        color: rgb(59, 185, 59);
+        margin-bottom: 5px;
+        font-size: 49px;
+        overflow: hidden;
+    }  
+}
+
+/* personalizando inputs */
+
+#clear {
+    background-color: rgb(216, 8, 8);
+}
+#clear:hover {
+    background-color: rgb(189, 8, 8);
+}
+
+#backOne {
+    background-color: orange;
+}
+#backOne:hover {
+    background-color: rgb(197, 129, 3);
+}
+
+#percent, #division, #less, #sum, #multi{
+    background-color: rgb(43, 122, 226);
+}
+#percent:hover, #division:hover, #less:hover, #sum:hover, #multi:hover{
+    background-color: rgb(37, 104, 192);
+}
+
+
+#result {
+    background-color: rgb(38, 184, 38);
+}
+#result:hover {
+    background-color: rgb(31, 143, 31);
+}
